@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcrição de audio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bar">
+    <i class="menu-icon">
+    </i>
+    <div class="logo">
+        <img alt="Logo" height="30" src="assets/icons8-github-64.png" width="30"/>
+        <span>
+      <a href="https://github.com/lipesc" target="_blank">lipesc</a>
+
+    </span>
+    </div>
+
+<div class="container">
+    <h1>Transcrição de audio</h1>
+    <h4>audios em português sem suporte para resumo ou capitulos</h4>
+
+    <div class="upload-section">
+        <input type="file" id="audioFile" accept="audio/*">
+        <label for="audioFile"> Selecione o audio</label>
+    </div>
+
+
+    <div id="errorPopup" style="display:none;">
+        <div id="popupContent">
+            <span id="closePopup" onclick="closePopup()">&times;</span>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+
+    <div id="loading" class="loading hidden">
+         Audio sendo processado ...
+    </div>
+
+
+    <div class="results">
+        <h2>Resumo</h2>
+        <p id="summary">Resumo ...</p>
+        <h2>Capítulos</h2>
+        <p id="chapters">Capitulos ...</p>
+        <h2>Idioma</h2>
+        <p id="language">Idioma do audio ...</p>
+        <h2>Transcrição</h2>
+        <p id="transcription">Transcrição completa ...</p>
+
+    </div>
+</div>
+<footer> <p>[lipesc]. github <a href="https://github.com/lipesc/transcricao_audios" target="_blank"> repositório </a>.</p>
+<script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@ package lipesc.github.transcicaoaudios.model;
 //import com.assemblyai.api.resources.transcripts.types.Chapter;
 
 import java.util.List;
-
+/**/
 public class TranscriptionResult {
     private String transcription;
     private String summary;
@@ -14,6 +14,7 @@ public class TranscriptionResult {
         this.transcription = transcription;
         this.summary = summary;
         this.chapters = chapters;
+        this.language = language;
 
     }
 
@@ -51,29 +52,28 @@ public class TranscriptionResult {
 
 
     public  static class Chapter {
-        private  int start;
-        private int end;
+        private  String start;
+        private String end;
         private  String headline;
-
-    public Chapter(int start, int end, String headline) {
+    public Chapter(String start, String end, String headline) {
         this.start = start;
         this.end = end;
         this.headline = headline;
     }
 
-        public int getStart() {
+        public String getStart() {
             return start;
         }
 
-        public void setStart(int start) {
+        public void setStart(String start) {
             this.start = start;
         }
 
-        public int getEnd() {
+        public String getEnd() {
             return end;
         }
 
-        public void setEnd(int end) {
+        public void setEnd(String end) {
             this.end = end;
         }
 
