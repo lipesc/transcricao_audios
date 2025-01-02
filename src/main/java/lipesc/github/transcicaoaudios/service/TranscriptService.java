@@ -8,12 +8,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
 public class TranscriptService {
 
-    String KEY = System.getenv("apikey");
+    private static final String KEY = Optional.ofNullable(System.getenv("apiKey"))
+            .orElseThrow(() -> new IllegalStateException("apiKey environment variable is not defined"));
+
     private String formatTime(int milliseconds) {
         int seconds = milliseconds / 1000;
         int minutes = seconds / 60;
